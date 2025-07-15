@@ -1,5 +1,15 @@
 import { defineConfig, fontProviders } from "astro/config";
-// ... other imports
+import sitemap from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
+import markdoc from "@astrojs/markdoc";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import icon from "astro-icon";
+import { remarkReadingTime } from "./src/scripts/remark-reading-time.mjs";
+import undiciRetry from "./src/scripts/undici-retry.js";
+import react from "@astrojs/react";
+import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   site: "https://www.erfianugrah.com",
