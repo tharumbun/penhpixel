@@ -3,7 +3,7 @@ import { getCollection, render } from "astro:content";
 import MarkdownPostLayout from "../../layouts/MarkdownPostLayout.astro";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("short_form");
+  const blogEntries = await getCollection("architecture");
   return blogEntries.map((entry) => ({
     params: { id: entry.id },
     props: { entry },
