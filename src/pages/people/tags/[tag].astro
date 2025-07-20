@@ -4,7 +4,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import BlogPost from "../../../components/BlogPost.astro";
 import { sortByDate } from "../../../components/sortbydate";
 export async function getStaticPaths() {
-  const allLongForm = await getCollection("long_form");
+  const allLongForm = await getCollection("people");
   const uniqueTags = [
     ...new Set(allLongForm.map((post) => post.data.tags).flat()),
   ];
@@ -30,7 +30,7 @@ const { posts } = Astro.props;
       .sort(sortByDate)
       .map((post) => (
         <BlogPost
-          url={`/long_form/${post.id}/`}
+          url={`/people/${post.id}/`}
           image={post.data?.image?.src || ""}
           alt={post.data?.image?.alt || ""}
           title={post.data?.title || ""}
