@@ -12,7 +12,7 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://www.erfianugrah.com",
+  site: "https://tharum.com",
 
   // your existing config ...
 
