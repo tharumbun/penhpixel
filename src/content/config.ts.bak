@@ -56,7 +56,6 @@ const people = defineCollection({
   }),
 });
 
-
 const authors = defineCollection({
   type: "content", // v2.5.0 and later
   schema: z.object({
