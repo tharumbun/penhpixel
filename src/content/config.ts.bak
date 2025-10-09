@@ -132,4 +132,4 @@ const authors = defineCollection({
 
 
 // 3. Export a single `collections` object to register your collection(s)
-export const collections = { streetlife, architecture, people, authors };
+export const collections = { moments, places, people, authors };
