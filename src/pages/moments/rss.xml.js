@@ -5,7 +5,7 @@ import MarkdownIt from "markdown-it";
 const parser = new MarkdownIt();
 
 export async function GET(context) {
-  const muses = await getCollection("moments");
+  const moments = await getCollection("moments");
   return rss({
     stylesheet: "/rss/rss.xsl",
     title: "stoicopa",
