@@ -3,8 +3,8 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import { sortByDate } from "../components/sortbydate";
-const pageTitle = "Streetlife";
-const allMuses = await getCollection("streetlife");
+const pageTitle = "Places";
+const allMuses = await getCollection("places");
 ---
 
 <BaseLayout title={pageTitle} is404Page={false}>
