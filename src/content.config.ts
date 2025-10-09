@@ -4,7 +4,7 @@ import { glob } from "astro/loaders";
 // 2. Define a `type` and `schema` for each collection
 const streetlife = defineCollection({
   // type: "content", // v2.5.0 and later
-  loader: glob({ pattern: "**\/[^_]*.mdx", base: "./src/content/streetlife" }),
+  loader: glob({ pattern: "**\/[^_]*.mdx", base: "./src/content/places" }),
   schema: z.object({
     title: z.string(),
     tags: z.array(z.string()),
@@ -23,7 +23,7 @@ const streetlife = defineCollection({
 
 const architecture = defineCollection({
   // type: "content", // v2.5.0 and later
-  loader: glob({ pattern: "**\/[^_]*.mdx", base: "./src/content/architecture" }),
+  loader: glob({ pattern: "**\/[^_]*.mdx", base: "./src/content/moments" }),
   schema: z.object({
     title: z.string(),
     tags: z.array(z.string()),
@@ -81,8 +81,8 @@ const authors = defineCollection({
 
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
-  streetlife,
-  architecture,
+  places,
+  moments,
   people,
   authors,
 };
