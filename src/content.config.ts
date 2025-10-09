@@ -2,7 +2,7 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 // 2. Define a `type` and `schema` for each collection
-const streetlife = defineCollection({
+const places = defineCollection({
   // type: "content", // v2.5.0 and later
   loader: glob({ pattern: "**\/[^_]*.mdx", base: "./src/content/places" }),
   schema: z.object({
@@ -21,7 +21,7 @@ const streetlife = defineCollection({
   }),
 });
 
-const architecture = defineCollection({
+const moments = defineCollection({
   // type: "content", // v2.5.0 and later
   loader: glob({ pattern: "**\/[^_]*.mdx", base: "./src/content/moments" }),
   schema: z.object({
